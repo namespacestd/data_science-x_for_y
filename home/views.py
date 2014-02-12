@@ -3,11 +3,11 @@ from xfory.models import SiteTrafficTracker, PotentialMember
 
 # Create your views here.
 
-if not SiteTrafficTracker.objects.all()[0]:
-    traffic_tracker = SiteTrafficTracker()
-    traffic_tracker.save()
-else:
+try: 
     traffic_tracker = SiteTrafficTracker.objects.all()[0]
+except: 
+    traffic_tracker = SiteTrafficTracker()
+    traffic_tracker.save()    
 
 def index(request):
     traffic_tracker.increment_visited()
