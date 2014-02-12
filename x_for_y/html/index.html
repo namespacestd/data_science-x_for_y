@@ -1,0 +1,19 @@
+
+{% load staticfiles %}
+
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title> </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans|Kaushan+Script|Orbitron|Belgrano' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="centered" id="intro-header"> X-for-Y</div>
+        <div class="centered" id="intro-tagline"> Lorem ipsum dolor sit amet </div>
+        Total Visited: {{tracker.total_visited}} <br/>
+        Splash Clicked: {{tracker.num_splash_click}}
+    </body>
+</html>

@@ -1,0 +1,25 @@
+
+body {
+    background: url('../img/bg.png');
+    margin: 0 0 50px 0;
+}
+
+#intro-header {
+    font-family: 'Kaushan Script';
+    font-size: 120px;
+    color: #434742;
+    text-shadow: 3px 3px 5px black;
+    margin-top: 30px;
+    padding-right: 30px;
+}
+
+#intro-tagline {
+    font-family: 'Open Sans';
+    text-shadow: 1px 1px 3px black;
+    font-size: 30px;
+
+}
+
+.centered {
+    text-align: center;
+}
