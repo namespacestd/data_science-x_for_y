@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
 from django.conf import settings 
+from .utilities import AppInitialization
 
 from django.contrib import admin
 admin.autodiscover()
@@ -12,3 +13,5 @@ urlpatterns = patterns('',
     url(r'^$', 'home.views.index', name='index'), 
     url(r'^admin/', include(admin.site.urls)),
 )
+
+AppInitialization.initialize_database()
