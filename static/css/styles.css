@@ -20,6 +20,100 @@ body {
 
 }
 
+#main-content {
+    width: 1000px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 5px 5px rgb(22, 22, 22);
+    position: relative;
+}
+
+#main-content-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: url('../img/medical-devices.jpg') center;
+    opacity: .75;
+    z-index: -1;
+}
+
+#sign-up-direct {
+    font-size: 18px;  
+}
+
+#main-content-text {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin-bottom: 75px;
+    margin-right: 40px;
+    padding: 10px;
+    font-family: 'Belgrano';
+    background: url('../img/box_bg.png');
+    width: 600px;
+}
+
+.sign-up-form {
+    display: none;
+}
+
+#sign-up-form-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: url('../img/box_bg.png');
+    z-index: -1;
+}
+
+#sign-up-form input[type=text],
+#sign-up-form input[type=password] {
+    font-family: 'Open Sans';
+    padding: 1px 3px;
+    width: 140px;
+    font-size: 12px;
+    background-color: #eee;
+}
+
+.small-top-margin {
+    margin-top: 25px;
+}
+
 .centered {
     text-align: center;
+}
+
+.emphasis {
+    display: inline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.emphasis:hover {
+    text-shadow: 1px 1px 3px black;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 15px;
+    font-family: 'Belgrano';
+    font-size: 14px;
+    text-decoration: none;
+    color: black !important;
+    border: 1px solid #111;
+    border-radius: 5px;
+    margin: 2px;
+    background-image: linear-gradient(#A0C6F2, #456C99);
+    background-size: auto 200%;
+    background-position: 0 100%;
+    transition: background-position 0.33s;
+    outline: none;
+}
+
+#sign-up-button {
+    margin-top: 10px;
 }

@@ -14,6 +14,10 @@ class SiteTrafficTracker(models.Model):
     def increment_splash(self):
         self.num_splash_click+=1
 
+class PotentialMember(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+
 '''
 class UserList(models.Model):
     user = models.ForeignKey(Profile, null=False)

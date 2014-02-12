@@ -13,7 +13,36 @@
     <body>
         <div class="centered" id="intro-header"> X-for-Y</div>
         <div class="centered" id="intro-tagline"> Lorem ipsum dolor sit amet </div>
+
+        <div class="small-top-margin" id="main-content">
+            <div class="initial-content" id="main-content-background"></div>
+            <div class="initial-content" id="main-content-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                <div class="initial-content small-top-margin" id="sign-up-direct"> Interested? Sign up to be notified <div class="emphasis" id='sign-up-direct-button'> here. </div></div>
+
+                <div class="sign-up-form centered small-top-margin" id="sign-up-form-fill-out">
+                    <form action="/sign_up/" method="post">
+                        {% csrf_token %}
+                        <div class="form-field"> Name: <input type="text" name="name" required></input></div>
+                        <div class="form-field"> Email: <input type="email" name="email" required></input></div>
+                        <input class="button" id="sign-up-button" type="submit" value="Sign Up"> </input>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
         Total Visited: {{tracker.total_visited}} <br/>
         Splash Clicked: {{tracker.num_splash_click}}
+    
+        <script src="{% static "js/jquery-1.10.2.min.js" %}"></script>
+        <script>
+            $(document).ready(function() {
+                $('#sign-up-direct-button').click(function(){
+                    $('.sign-up-form').show();
+                });
+            });
+        </script>
     </body>
 </html>

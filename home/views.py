@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from x_for_y.models import SiteTrafficTracker
+from django.shortcuts import render, HttpResponseRedirect
+from x_for_y.models import SiteTrafficTracker, PotentialMember
 
 # Create your views here.
 
@@ -12,3 +12,17 @@ def index(request):
     return render(request, "index.html", {
         'tracker' : traffic_tracker
     })
+
+def sign_up(request):
+    if request.POST:
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+
+        new_member = PotentialMember(name=name, email=email)
+        new_member.save()
+        traffic_tracker.increment_splash()
+        traffic_tracker.save()
+        
+        print request.POST
+    
+    return HttpResponseRedirect('/')
