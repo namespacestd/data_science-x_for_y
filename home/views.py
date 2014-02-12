@@ -1,9 +1,13 @@
 from django.shortcuts import render, HttpResponseRedirect
-from x_for_y.models import SiteTrafficTracker, PotentialMember
+from xfory.models import SiteTrafficTracker, PotentialMember
 
 # Create your views here.
 
-traffic_tracker = SiteTrafficTracker()
+if not SiteTrafficTracker.objects.all()[0]:
+    traffic_tracker = SiteTrafficTracker()
+    traffic_tracker.save()
+else:
+    traffic_tracker = SiteTrafficTracker.objects.all()[0]
 
 def index(request):
     traffic_tracker.increment_visited()

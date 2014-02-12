@@ -1,7 +1,7 @@
 import os.path
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-# Django settings for x_for_y project.
+# Django settings for xfory project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -104,10 +104,10 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'x_for_y.urls'
+ROOT_URLCONF = 'xfory.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'x_for_y.wsgi.application'
+WSGI_APPLICATION = 'xfory.wsgi.application'
 
 TEMPLATE_DIRS = (
     os.path.join(os.path.dirname(__file__), 'html').replace('\\', '/'),
@@ -128,7 +128,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
-    'x_for_y',
+    'xfory',
     'home',
 )
 
@@ -143,7 +143,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.tz',
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
-    'x_for_y.context_processors.authentication_info' 
+    'xfory.context_processors.authentication_info' 
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
@@ -152,7 +152,7 @@ SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 # into the app. Should be disabled in production.
 AUTOLOAD_TESTING_DATA = True
 
-# Automatically creates 'x_for_y' admin account upon start of the application.
+# Automatically creates 'xfory' admin account upon start of the application.
 AUTOLOAD_ADMIN_ACCOUNT = True
 
 # A sample logging configuration. The only tangible logging

@@ -1,1 +1,1 @@
-web: gunicorn x_for_y.wsgi
+web: gunicorn xfory.wsgi
